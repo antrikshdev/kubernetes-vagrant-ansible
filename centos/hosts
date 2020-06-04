@@ -1,0 +1,17 @@
+[kubernetes-master-nodes]
+kubernetes-master ansible_host=172.42.42.100
+
+[kubernetes-worker-nodes]
+kubernetes-worker1 ansible_host=172.42.42.101
+kubernetes-worker2 ansible_host=172.42.42.102
+
+
+[kubernetes:children]
+kubernetes-worker-nodes
+kubernetes-master-nodes
+
+[kubernetes:vars]
+ansible_password=vagrant
+ansible_ssh_user=vagrant
+
+
