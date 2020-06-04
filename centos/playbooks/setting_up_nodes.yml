@@ -52,3 +52,5 @@
 
   - name: Enabling Bridge Firewall Rule
     shell: "echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables"
+  - name: Permission to the docker grp
+    shell: sudo chmod 666 /var/run/docker.sock
