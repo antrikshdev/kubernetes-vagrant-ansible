@@ -1,6 +1,10 @@
 # Kubernetes Cluster using Ansible
 * Clone repository.
-* Create multiple centos8 servers. One master and many worker. Use vagrant like [here](https://github.com/edib/many_vagrant_machines)
+* Create multiple centos7 servers. One Anisble controller, One master and 2 worker nodes. Use vagrant file to provisioning the 4 VM's in oracle virtual box.
+* Use the following command 
+  1. vagrant box add centos/7
+  2. vagrant up 
+* cd kubernetes-vagrant-ansible/centos/playbooks/
 * Change the “ad_addr” in the env_variables file with the IP address of the Kubernetes master node.
 * Add the IP Addresses of the worker nodes and the master node in the “hosts” file.
 * Run the following command to setup the Kubernetes Master node.
